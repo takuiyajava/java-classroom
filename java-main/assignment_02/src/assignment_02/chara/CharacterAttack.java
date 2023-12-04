@@ -4,7 +4,6 @@ import assignment_02.util.GameText;
 
 public class CharacterAttack {
 
-    // characterAttackVoice[0] is always 0
     public static boolean onePunch(int selectedAttack, String playCharacter, String[] skillList, String characterAttackVoice, boolean isSuccess) {
         // Check selectedAttack
         switch (selectedAttack) {

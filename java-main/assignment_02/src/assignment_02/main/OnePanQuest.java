@@ -3,7 +3,7 @@ package assignment_02;
 import assignment_02.chara.CharacterAction;
 import assignment_02.chara.Saitama;
 import assignment_02.chara.CharacterAttackVoice;
-import assignment_02.util.CheckStageClear;
+import assignment_02.util.ClearStageChecker;
 import assignment_02.chara.Genos;
 import assignment_02.util.*;
 import assignment_02.villain.Villain;
@@ -29,7 +29,6 @@ public class OnePanQuest {
 
         boolean isGameOver = false;
         int selectedCharacter;
-
 
         // Start Application program =======================================
 
@@ -92,7 +91,7 @@ public class OnePanQuest {
             }
 
             // Switch villain messages per stage
-            String villainComment = villain.message(stageProgress);
+            String villainComment = Villain.message(stageProgress);
 
             // Display villainComment
             System.out.printf("%s: %s %n", stageVillain, villainComment);
@@ -119,7 +118,7 @@ public class OnePanQuest {
             // Attack End ==================================
 
             // Call attackVoice() method store into villainAttackVoice
-            String villainAttackVoice = villain.attackVoice(stageProgress);
+            String villainAttackVoice = Villain.attackVoice(stageProgress);
 
             // Random sounds and VillainAttack ====================================
             if (isSuccess) {
@@ -137,8 +136,8 @@ public class OnePanQuest {
             }
             // Random sounds and VillainAttack End ====================================
 
-            // Clear message
-            stageProgress = CheckStageClear.clearMessage(isGameOver, i, stageProgress, stages);
+            // Clear stage message
+            stageProgress = ClearStageChecker.clearMessage(isGameOver, i, stageProgress, stages);
         }
         // Loop End ==============================
         // End game

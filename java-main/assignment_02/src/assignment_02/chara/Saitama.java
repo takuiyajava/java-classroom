@@ -19,6 +19,7 @@ public class Saitama extends Character {
             case 1 -> message = ": \"お前の怪人は妥協の趣味\"";
             default -> message = ": \"俺のヒーローは本気の趣味だ\"";
         }
+
         return message;
     }
 

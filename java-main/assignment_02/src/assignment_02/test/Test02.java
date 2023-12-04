@@ -3,7 +3,7 @@ package assignment_02.test;
 import assignment_02.chara.CharacterAction;
 import assignment_02.chara.Saitama;
 import assignment_02.chara.CharacterAttackVoice;
-import assignment_02.util.CheckStageClear;
+import assignment_02.util.ClearStageChecker;
 import assignment_02.chara.Genos;
 import assignment_02.util.*;
 import assignment_02.villain.Villain;
@@ -140,7 +140,7 @@ public class Test02 {
             // Random sounds and VillainAttack End ====================================
 
             // Clear message
-            CheckStageClear.clearMessage(isGameOver, i, stageProgress, stages);
+            ClearStageChecker.clearMessage(isGameOver, i, stageProgress, stages);
         }
         // Loop End ==============================
         // End game
